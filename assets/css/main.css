@@ -1,13 +1,33 @@
 /* Este es el MAIN CSS, aqui defino los valores de las cosas esteticas de mi página */
 /*
 Color Palette
-#79d7fd - regular text
-#00bbfa - highlighted / links
+#79d7fd - highlighted / links
+#00bbfa - regular text
 #ffc54a - important text
-#001736 - background 1
-#00183e - background 2
+#001736 - background 1 darker blue
+#0042a3 - background 2 brigher blue
 
 */
+@font-face{
+	font-family: modernSans-light;
+	src: url("fonts/modern-sans/ModernSans-Light.otf");
+}	
+@font-face{
+	font-family: yagi;
+	src: url("fonts/yagiuhfno2/YagiUhfNo2.otf");
+}
+@font-face{
+	font-family: times-new-romance-regular;
+	src: url("fonts/times-new-romance/Times New Romance.otf");
+}
+*{
+	margin: 0;
+	padding: 0;
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
 html{
 	box-sizing: border-box;
 }
@@ -15,30 +35,21 @@ html{
 	box-sizing: inherit;
 }
 body{
-	background: #fff;
-	font-family: modernSans-light,sans-serif;
+	background: #000000;
+	font-family: modernSans-light;
 	font-size: 20pt;
-	font-weight: light;
 	line-height: 1.75em;
 	color: #79d7fd;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+ul {
+	list-style-position: inside;
 }
 
-@font-face{
-	font-family: modernSans-light;
-	src: url("../assets/fonts/modern-sans/ModernSans-Light.otf");
-	font-weight: light;
-}	
-@font-face{
-	font-family: yagi;
-	src: url("../assets/fonts/yagiuhfno2/YagiUhfNo2.otf");
-	font-weight: bold;
-}
-@font-face{
-	font-family: times-new-romance-regular;
-	src: url("../assets/fonts/times-new-romance/Times New Romance.otf");
-	font-weight: regular;
-}
-
+/*
 h1{
 	font-family: yagi;
 	color: #79d7fd;
@@ -57,5 +68,125 @@ h1 a, h2 a{
 	text-decoration: none;
 }
 h1 a strong, h2 a strong{
+	color: #ffc54a;
+}
+*/
+
+/*-----Header Wireframe-----*/
+.header-wireframe {
+	width: 100%;
+	max-width: 100%;
+	min-width: 800px;
+	background-color: #001736;
+	font-family: modernSans-light;
+	background-image: url("imagenes/bgheader.png");
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-position-y: -50px;
+	background-size: cover;
+	overflow: hidden;
+}
+/*-----Header Logo-----*/
+.header-identity {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: left;
+	width: 100%;
+	height: 300px;
+	min-height: 200px;
+	border-bottom: 5px solid #0042a3;
+	background-color: #00173690;
+	
+	
+}
+/*-----Avatar Wrapper-----*/
+.avatar-wrapper {
+	width: 150px;
+	height: 150px;
+	border-radius: 20px;
+	overflow: hidden;
+	background-color: #001736;
+	margin-right: 20px;
+	margin-left: 20px;
+	border: 3px solid #0042a3;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.avatar-wrapper img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.header-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: left;
+	text-align: left;
+}
+.title {
+	font-family: modernSans-light;
+	color: #ffc54a;
+	height: 50px;
+	min-height: 50px;
+	max-height: 50px;
+	padding-top: 10px;
+}
+.subtitle-1 {
+	font-family: modernSans-light;
+	color: #79d7fd;
+	height: 50px;
+	min-height: 50px;
+	max-height: 50px;
+	padding-top: 15px;
+}
+.subtitle-2 {
+	font-family: modernSans-light;
+	color: #00bbfa;
+	height: 50px;
+	min-height: 50px;
+	max-height: 50px;
+	padding-top: 10px;
+}
+.nav-menu {
+	background-color: #001736;
+	width: 100%;
+	min-width: 800px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+}
+nav {
+	
+	
+}
+nav a {
+	text-decoration: none;
+	color: inherit;
+}
+nav a:hover {
+	text-decoration: none;
+	color: #ffc54a;
+}
+.nav-bottom {
+	width: 100%;
+	min-width: 800px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+}
+.nav-bottom a {
+	text-decoration: none;
+	color: inherit;
+}
+.nav-bottom a:hover {
+	text-decoration: none;
 	color: #ffc54a;
 }
